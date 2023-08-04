@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;600;800&display=swap');
+
+html{
+  font-size: 100%;
+  overflow-x: hidden;
+}
+body{
+  font-family: 'Tektur', cursive;
+}
+#root{
+  height: 100%;
+}
+.App{
+  min-height: 100%;
+}
+
+
+@import "all";
