@@ -1,9 +1,14 @@
 import React from 'react';
 
 
+
+
 const Welcom:React.FC = () => {
   return (
-    <h1 style={{"margin": "10rem auto"}}> Welcom hello everyOne </h1>
+    <>
+      <h2>hello</h2>
+    </>
+    
   );
 }
 export default Welcom;

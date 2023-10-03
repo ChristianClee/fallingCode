@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header from './components/header/Header';
 import { Outlet } from "react-router-dom"
 
 
@@ -8,7 +8,7 @@ const Layout:React.FC = () => {
     <div className="App">
       <Header />
       <Outlet />
-      <footer></footer>
+      <footer>2023</footer>
     </div>
   );
 }

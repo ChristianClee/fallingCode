@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
-import Spans from './Components.tsx/Spans';
-import OuterArrow from './Components.tsx/OuterArrow';
-import FormOne from './Components.tsx/FormOne';
-import Message from './Components.tsx/Message';
+import Spans from './components/Spans';
+import OuterArrow from './components/OuterArrow';
+import FormOne from './components/FormOne';
+import Message from './components/Message';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { selectClock } from '../../redux/slices/clockSlice';
-import { useActions } from '../../redux/reduxHook';
+import { useActions } from '../../hooks/reduxHook';
 import  "boxicons" 
 
 

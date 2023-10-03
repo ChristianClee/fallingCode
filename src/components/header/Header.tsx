@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
-import logo from '../assets/pictures/jpg/myPicture.png'
+import logo from '../../assets/pictures/jpg/myPicture.png'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -23,13 +24,16 @@ const Header: React.FC = () => {
         <nav className='header__nav'>
           <ul>
             <li>
-              <a href="/round" ref={clock1} className={(sessionStorage.getItem("active") == "1")? "active": "" } onClick={() => saveSection("1")}>Clock1</a>
+              <NavLink to="/" >Welcom</NavLink>
             </li>
             <li>
-              <a href="/blue" ref={clock2} className={(sessionStorage.getItem("active") == "2") ? "active" : ""} onClick={() => saveSection("2")}>Clock2</a>
+              <NavLink to="/round" >Clock1</NavLink>
             </li>
             <li>
-              <a href="/rectangle" ref={clock3} className={(sessionStorage.getItem("active") == "3") ? "active" : ""} onClick={() => saveSection("3")}>Clock3</a>
+              <NavLink to="/blue">Clock2</NavLink>
+            </li>
+            <li>
+              <NavLink to="/rectangle" ref={clock3}>Clock3</NavLink>
             </li>
           </ul>
         </nav>

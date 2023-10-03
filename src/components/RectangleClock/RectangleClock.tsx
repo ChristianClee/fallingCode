@@ -4,7 +4,7 @@ import Buttons from './Components/Buttons';
 import { matches } from "./Components/imports"
 import { useSelector } from 'react-redux';
 import { selectRectangle } from "../../redux/slices/rectangleSlice"
-import { useActions } from '../../redux/reduxHook';
+import { useActions } from '../../hooks/reduxHook';
 
 
 type getMoveType = (
