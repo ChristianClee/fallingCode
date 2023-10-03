@@ -8,10 +8,7 @@
   height: .1rem;
   background-color: $bl-items;
   transform: translateX(0%) translateY(-50%) rotate($j);
-
 }
-
-
 
 %backgroundFonClock{
   background: -webkit-linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));
@@ -24,6 +21,7 @@
   background: -moz-linear-gradient(45deg, rgb(37, 86, 231), rgb(97, 155, 210));
   background: linear-gradient(45deg, rgb(37, 86, 231), rgb(97, 155, 210));
 }
+
 
 .BlueCircle__clock{
   position: relative;
@@ -52,7 +50,6 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     box-shadow: rgba(50, 50, 93, 0.255) 0px 30px 30px -12px inset, rgba(0, 0, 0, 0.567) 0px 18px 36px -18px inset;
-
   }
 }
 .BlueCircle__table{

@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           <h4>Ilya</h4>
         </div>
         <nav className='header__nav'>
-          <ul>
+          {/* <ul>
             <li>
               <NavLink to="/" >Welcom</NavLink>
             </li>
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <li>
               <NavLink to="/rectangle" ref={clock3}>Clock3</NavLink>
             </li>
-          </ul>
+          </ul> */}
         </nav>
       </header>
 
