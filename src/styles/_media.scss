@@ -1,9 +1,11 @@
-@media(max-width:1800px){
-  html{font-size: 70%}
+@media(max-width:3800px){
+  html{
+    font-size: 60%;
+  }
 }
-@media(max-width: 1600px){
-  html{font-size: 60%}
-}
+// @media(max-width: 1600px){
+//   html{font-size: 60%}
+// }
 @media(max-width:850px){
   html{font-size: 50%}
 }

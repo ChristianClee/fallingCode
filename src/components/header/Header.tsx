@@ -20,22 +20,13 @@ const Header: React.FC = () => {
             <img className='ibg' src={logo} alt="no-picture" />
           </div>
           <h4>Ilya</h4>
+          <div className='header__container-contacts'>
+            <p>8-977-439-34-18</p>
+            <p>ilya.mishkov@gmail.com</p>
+          </div>
+          
         </div>
         <nav className='header__nav'>
-          {/* <ul>
-            <li>
-              <NavLink to="/" >Welcom</NavLink>
-            </li>
-            <li>
-              <NavLink to="/round" >Clock1</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blue">Clock2</NavLink>
-            </li>
-            <li>
-              <NavLink to="/rectangle" ref={clock3}>Clock3</NavLink>
-            </li>
-          </ul> */}
         </nav>
       </header>
 

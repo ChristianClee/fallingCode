@@ -8,7 +8,7 @@ const Layout:React.FC = () => {
     <div className="App">
       <Header />
       <Outlet />
-      <footer>2023</footer>
+  
     </div>
   );
 }

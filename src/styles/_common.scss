@@ -3,6 +3,7 @@ $bl-items-hover: rgb(15, 50, 74);
 $bl-items: white;
 $orangeCollor: rgb(209, 189, 5);
 // $rec-bg: linear-gradient(180deg, rgba(141,75,68,1) 0%, rgba(236,129,117,1) 100%);
+$heightHeader: 70px;
 
 $width-rectangle-elem: 4rem; // !!! it sets sizes of timeElem
 $height-rectangle-elem: 8rem; // !!! it sets sizes of timeElem
@@ -17,20 +18,13 @@ $height-rectangle-elem: 8rem; // !!! it sets sizes of timeElem
 }
 
 // sections
-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 1rem;
-}
+
 section{
 }
 
+.App{
+  margin-top: $heightHeader;
+}
 
 
 footer{
@@ -55,7 +49,7 @@ h3{
   font-size: 1.9rem;
 }
 h4{
-  font-size: 1.6rem;
+  font-size: 20px;
 }
 h5{
   font-size: 1.3rem;
