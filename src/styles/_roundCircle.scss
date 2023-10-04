@@ -4,8 +4,8 @@
   left: 0%;
   top: 50%;
   width: 100%;
-  height: .1rem;
-  background-color: black;
+  height: .2rem;
+  background-color: rgb(15, 50, 74);
   transform: translateX(0%) translateY(-50%) rotate($j);
   z-index: 2;
 }
@@ -13,22 +13,27 @@
 .roundCircle{
 }
 .roundCircle__body{
-  padding: 3rem ;
-  max-width: 70rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px 2px black;
+  padding: 4rem;
+ @extend %backgroundFonClock;
   height: inherit;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   gap: 4rem;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   position: relative;
 }
 .roundCircle__clock{
-   position: relative;
-   border-radius: 50%;
-   width: 25rem;
-   height: 25rem;
-   background-color: rgb(255, 255, 255);
+  position: relative;
+  border-radius: 50%;
+  width: 22rem;
+  height: 22rem;
+  
+  // background-color: $orangeCollor;
+  // background-color: rgb(15, 50, 74);
 
 }
 .roundCircle__outerArrow{
@@ -38,6 +43,8 @@
   width: 100%;
   height: 100%;
   transform: rotate(45deg);
+  
+  
 }
 .roundCircle__arrow{
   position: absolute;
@@ -45,7 +52,8 @@
   top: 0;
   width: 2.5rem;
   height: 2.5rem;
-  transform: translateY(.95rem) translateX(1.35rem) rotate(15deg);
+  transform: translateY(.1rem) translateX(0.35rem) rotate(15deg);
+  
 }
 .roundCircle__time{
   position: absolute;
@@ -55,7 +63,9 @@
   width: 93%;
   height: 93%;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(139, 138, 138);
+@extend %backgroundFonDial;
+  
   z-index: 12;
   display: flex;
   align-items: center;
@@ -63,8 +73,11 @@
 }
 
 .roundCircle__display{
-  font-size: 4rem;
-  width: 17.7rem;
+
+  font-size: 3.3rem;
+  width: 14rem;
+  // color: $orangeCollor; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  color: rgb(15, 50, 74);
 }
 .roundCircle__littleClock{
   position: absolute;
@@ -72,8 +85,9 @@
   left: 40%;
   width: 4.5rem;
   height: 4.5rem;
-  border: 0.2rem solid black;
+  border: 0.2rem solid rgb(15, 50, 74);
   border-radius: 50%;
+    
 }
 .roundCircle__littleArrow{
   position: absolute;
@@ -82,14 +96,14 @@
   top: .5rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: black;
+  background-color: rgb(15, 50, 74);
 
 }
 .roundCircle__littleRound{
   position: absolute;
   width: 1rem;
   height: 1rem;
-  border: 0.1rem solid black;
+  border: 0.1rem solid  rgb(15, 50, 74);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -103,82 +117,65 @@
   margin-bottom: 1rem;
 }
 .tableManagment__container{
-  height: 21.5rem;
+  height: 23rem;
   overflow-y: scroll;
-  // background-color: aqua;
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px 2px black;
+  &::-webkit-scrollbar {
+  width: 0;
+}
 }
 
 
 .tableManagment__loop{
-
-  max-width: 8;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .tableManagment__loop>*{
-  &::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.474);
-    bottom: 0;
-    left: 0;
-  }
-}
-.tableManagment__loop>*:first-child{
-  &::after{
-    background-color:  rgba(255, 255, 255, 0);
-  }
 }
 
 .tableManagment__message{
   position: relative;
   display: flex;
   width: 100%;
+  height: 5rem;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(109, 109, 109);
+  border-radius: 1rem;
+  padding: 0.5rem 0.8rem;
+}
 
-  &::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: .1px;
-    background-color: black;
-    bottom: 0;
-    left: 0;
+
+.tableManagment__message-elem{
+  color: rgb(255, 255, 255);
+  &--one{
+    font-size: 1.8rem;
+    
+  }
+  &--two{
+    font-size: 1.5rem;
+  }
+
+
+  &--four{
+    font-size: 1.4rem;
+    color:rgb(15, 50, 74);
   }
 }
-.tableManagment__message p{
-  font-size: 1.2rem;
-}
-.tableManagment__message p span {
-  color: red;
-  font-size: 1.3rem;
-}
-.tableManagment__message div>:first-child{
-  margin-bottom: 0.7rem;
-}
-.tableManagment__message div>* span{
-  letter-spacing: .2rem;
-  font-size: 1.2rem;
-}
-.tableManagment__message>p:nth-child(2){
-  font-size: 2rem;
-}
+
 .tableManagment__leader{
-  font-size: 2rem;
-  color: rgb(92, 173, 173);
+  font-size: 1.7rem;
+  color: $orangeCollor;;
 }
 
 
 
 .tableManagment__buttons{
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // height: auto;
+
   width: 100%;
 
   border: .1rem solid black;
@@ -221,16 +218,16 @@
   }
 }
 .tableManagment__button_loop{
-  background-color: rgb(77, 232, 188);
+  background-color: rgb(111, 111, 111);
 }
 .tableManagment__button_stop{
-  background-color: rgb(180, 201, 138);
+  background-color: rgb(196, 196, 196);
 }
 .tableManagment__button_start{
-  background-color: rgb(188, 176, 139);
+  background-color: rgb(204, 204, 203);
 }
 .tableManagment__button_reset{
-  background-color: rgb(198, 155, 155);
+  background-color: rgb(233, 175, 15);
 }
 
   @for $i from 1 through 30{
@@ -239,24 +236,4 @@
     }
   }
 
-  
-@media(max-width:875px){
-  html{font-size: 80%}
-}
-@media(max-width:810px){
-  html{font-size: 70%}
-}
-@media(max-width:710px){
-  html{font-size: 60%}
-}
-@media(max-width:615px){
-  .roundCircle__body{
-    display: block;
-  }
-  .roundCircle__body>*:first-child{
-    margin-bottom: 4rem;
-  }
-}
-@media(max-width:335px){
-  html{font-size: 50%}
-}
+  // 233 175 15

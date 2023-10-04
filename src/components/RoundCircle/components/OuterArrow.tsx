@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import traingle from '../../../assets/pictures/jpg/triangle.svg'
 
 type OuterArrowType = {
-  outerArrowRef: React.MutableRefObject<never>
-  innerArrowRef: React.MutableRefObject<never>
-  millsecondsTime: React.MutableRefObject<never>
+  outerArrowRef: React.LegacyRef<HTMLDivElement>
+  innerArrowRef: React.LegacyRef<HTMLDivElement>
+  millsecondsTime: React.LegacyRef<HTMLDivElement>
 }
 
 
 const OuterArrow: React.FC<OuterArrowType> = ({ outerArrowRef, innerArrowRef, millsecondsTime }) => {
   const [digits, setDigits] = useState(0)
-  // console.log(millseconds.current)
+
 
   return (
     <>

@@ -12,19 +12,26 @@ type MessageProps = {
 const Message: React.FC<MessageProps> = ({ count, timeNow, lag, lagFirst}) => {
   return (
     <div className="tableManagment__message">
-      <p>Tap<span>{count}</span></p>
-      <p>{timeNow}</p>
-      {(count === "1") ||
-      <div>
-        <p> <span></span>  +{lag}</p>
-        <p> <span>leader</span> +{lagFirst}</p>
+      <div className="tableManagment__message-elem tableManagment__message-elem--one">
+        <p><span>{count}</span></p>
       </div>
-      }
+      
+      
+      <div className="tableManagment__message-elem tableManagment__message-elem--two">
+        <p>{timeNow}</p>
+      </div>
+      
       {
         (count === "1") && <div className='tableManagment__leader'>leader</div>
       }
-      
-      
+      {
+        (count !== "1") && (
+          <div className="tableManagment__message-elem tableManagment__message-elem--four">
+            <p> + {lag}</p>
+            <p> + {lagFirst}</p>
+          </div>
+        )
+      }
     </div>
   );
 }

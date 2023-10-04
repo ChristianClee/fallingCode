@@ -1,34 +1,22 @@
 
 @mixin line2($j, $i ){
-  transform-origin: -7.3rem 0rem;
+  transform-origin: -9.1rem 0rem;
   position: absolute;
   top: 50%;
-  left: 15.3rem;
+  left: 19.1rem;
   width: $i;
   height: .1rem;
   background-color: $bl-items;
   transform: translateX(0%) translateY(-50%) rotate($j);
 }
 
-%backgroundFonClock{
-  background: -webkit-linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));
-  background: -moz-linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));
-  background: linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));
-}
-
-.BlueCircle{
-  background: -webkit-linear-gradient(45deg, rgb(37, 86, 231), rgb(97, 155, 210));
-  background: -moz-linear-gradient(45deg, rgb(37, 86, 231), rgb(97, 155, 210));
-  background: linear-gradient(45deg, rgb(37, 86, 231), rgb(97, 155, 210));
-}
-
-
 .BlueCircle__clock{
+    
   position: relative;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: 0 0 12px 2px black;
   @extend %backgroundFonClock;
-  width: 25rem;
-  height: 25rem;
+  width: 32rem;
+  height: 32rem;
   border-radius: 1.5rem;
 }
 
@@ -38,8 +26,10 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 16rem;
-  height: 16rem;
+  // width: 16rem;
+  // height: 16rem;
+  width: 20rem;
+  height: 20rem;
   &::before{
     content:"";
     position: absolute;
@@ -49,42 +39,46 @@
     height: 91%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    box-shadow: rgba(50, 50, 93, 0.255) 0px 30px 30px -12px inset, rgba(0, 0, 0, 0.567) 0px 18px 36px -18px inset;
+    @extend %backgroundFonDial
+    
   }
 }
 .BlueCircle__table{
   position: absolute;
-  width: 11.2rem;
-  height: 2.5rem;
+  width: 13.2rem;
+  height: 3.2rem;
   top: 50%;
   left: 50%;
   transform: translateX(-50% ) translateY(-50%);
-  font-size: 2.5rem;
-  color: $bl-items;
+  font-size: 3rem;
+  // background-color: red;
+  color: white;
+  // background-color: $bl-items-hover;
 }
 .buttonClock__start{
   position: absolute;
   top: 1rem;
   left: 1rem;
-  width: 4rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
+  // background-color: rgb(158, 68, 68);
   cursor: pointer;
 }
 .buttonClock__start>div:nth-child(1){
   position: absolute;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 50%;
-  border: .15rem solid $bl-items;
+  border: .2rem solid $bl-items;
   transition: .5s;
 }
 .buttonClock__start>div:nth-child(2){
   position: absolute;
-  width: 1rem;
-  height: .1rem;
+  width: 1.5rem;
+  height: .15rem;
   top: .4rem;
   left: 37%;
   background-color: $bl-items;
@@ -93,8 +87,8 @@
 }
 .buttonClock__start>div:nth-child(3){
   position: absolute;
-  width: .4rem;
-  height: .1rem;
+  width: .6rem;
+  height: .15rem;
   top: 20%;
   left: 80%;
   transform: rotate(-45deg);
@@ -122,6 +116,7 @@
   height: .7rem;
   background-color: $bl-items;
   transition: background-color .5s;
+  
 }
 .buttonClock__start p,
 .buttonClock__reset>p{
@@ -129,7 +124,7 @@
   bottom: -.5rem;
   left: 50%;
   transform: translate(-50%);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: $bl-items;
   transition: color .5s;
 }
@@ -182,9 +177,9 @@
   @for $i from 1 through 100{
     .BlueCircle__metrix>*:nth-child(#{$i}) {
       @if 0 == $i % 10 {
-        @include line2(calc(3.6deg * #{$i} - 90deg), 1.2rem)
+        @include line2(calc(3.6deg * #{$i} - 90deg), 1.8rem)
       }@else{
-        @include line2(calc(3.6deg * #{$i} - 90deg), 0.6rem)
+        @include line2(calc(3.6deg * #{$i} - 90deg), 1rem)
       }
       
     }

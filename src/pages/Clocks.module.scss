@@ -1,0 +1,26 @@
+.wrapper{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.littleContainer{
+  display: flex;
+  gap: 4rem;
+}
+
+@media(max-width: 1200px){
+  .littleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+}
+@media(max-width: 665px){
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+}

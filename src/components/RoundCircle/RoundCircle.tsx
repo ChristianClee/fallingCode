@@ -19,9 +19,9 @@ const RoundCircle: React.FC = () => {
     cleanMessages,
   } = useActions()
 
-  const outerArrow = useRef(null!)
-  const innerArrow = useRef(null!)
-  const millsecondsTime = useRef(null!)
+  const outerArrow = useRef<HTMLDivElement>(null)
+  const innerArrow = useRef<HTMLDivElement>(null)
+  const millsecondsTime = useRef<HTMLDivElement>(null)
 
   const countLoop = useRef<number>(0)
   const bigArrowDeg = useRef<number>(45)
@@ -121,11 +121,11 @@ const RoundCircle: React.FC = () => {
     flag = false
   }
   function restart() {
-    //@ts-ignore
-    outerArrow.current.style.transform = `rotate(${45}deg)`
     bigArrowDeg.current = 45
-    //@ts-ignore
-    innerArrow.current.style.transform = `rotate(${0}deg)`
+    if (outerArrow.current && innerArrow.current) {
+      outerArrow.current.style.transform = `rotate(${45}deg)`
+      innerArrow.current.style.transform = `rotate(${0}deg)`
+    }
     littleArrowDeg.current = 0
 
 
