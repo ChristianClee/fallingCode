@@ -5,9 +5,10 @@ $orangeCollor: rgb(209, 189, 5);
 // $rec-bg: linear-gradient(180deg, rgba(141,75,68,1) 0%, rgba(236,129,117,1) 100%);
 $heightHeader: 70px;
 
-$width-rectangle-elem: 4rem; // !!! it sets sizes of timeElem
-$height-rectangle-elem: 8rem; // !!! it sets sizes of timeElem
+$width-rectangle-elem: 2.5rem; // !!! it sets sizes of timeElem
+$height-rectangle-elem: 5.5rem; // !!! it sets sizes of timeElem
 
+$backgroundFonClock: linear-gradient(180deg, rgb(176, 175, 175), rgb(72, 71, 71));
 %backgroundFonClock{
   background: -webkit-linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));
   background: -moz-linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));

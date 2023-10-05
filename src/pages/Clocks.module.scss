@@ -1,5 +1,4 @@
 .wrapper{
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,9 +7,10 @@
 .littleContainer{
   display: flex;
   gap: 4rem;
+  align-items: center;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 996px){
   .littleContainer{
     
     display: flex;

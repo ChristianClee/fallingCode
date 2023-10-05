@@ -5,8 +5,9 @@
 
 .rectangle__clock{
   @extend %backgroundFonClock;
-  width: 32rem;
-  height: 32rem;
+  /* width: 32rem;
+  height: 32rem; */
+  padding: 1rem;
   box-shadow: 0 0 12px 2px black;
   display: flex;
   flex-direction: column;
@@ -24,8 +25,8 @@
 
 .rectangle__share{
   position: relative;
-  width: 8rem;
-  height: 4rem;
+  width: 6rem;
+  height: 3.4rem;
   perspective: 30rem;
   cursor: pointer;
 }
@@ -136,14 +137,14 @@
 }
 .timeElem{
   position: relative;
-  height: 20.5rem;
+  height: 16rem;
   width: $width-rectangle-elem; 
 }
 .timeElem__container{
   position: absolute;
   top: 1rem;
   left: 0;
-  height: 10rem;
+  height: 8rem;
   width: 100%;
   
 }
