@@ -1,0 +1,24 @@
+.wrapper{
+  width: 70%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  border-radius: 1rem;
+  position: relative;
+  &::before{
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.266);
+    transition: .25s;
+  }
+  &:hover::before{
+    width: 100vw;
+  }
+}

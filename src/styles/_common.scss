@@ -8,6 +8,8 @@ $heightHeader: 70px;
 $width-rectangle-elem: 2.5rem; // !!! it sets sizes of timeElem
 $height-rectangle-elem: 5.5rem; // !!! it sets sizes of timeElem
 
+$falling-code-two: rgb(77, 212, 224);
+
 $backgroundFonClock: linear-gradient(180deg, rgb(176, 175, 175), rgb(72, 71, 71));
 %backgroundFonClock{
   background: -webkit-linear-gradient(180deg, rgb(53, 96, 225), rgb(97, 155, 210));
@@ -18,13 +20,24 @@ $backgroundFonClock: linear-gradient(180deg, rgb(176, 175, 175), rgb(72, 71, 71)
   box-shadow: rgba(50, 50, 93, 0.255) 0px 30px 30px -12px inset, rgba(0, 0, 0, 0.567) 0px 18px 36px -18px inset;
 }
 
-// sections
 
 section{
 }
 
 .App{
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main{
+  padding: 0 .5rem;
   margin-top: $heightHeader;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  
 }
 
 
@@ -50,7 +63,7 @@ h3{
   font-size: 1.9rem;
 }
 h4{
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 h5{
   font-size: 1.3rem;

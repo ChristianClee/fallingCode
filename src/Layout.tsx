@@ -7,8 +7,9 @@ const Layout:React.FC = () => {
   return (
     <div className="App">
       <Header />
-      <Outlet />
-  
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 }

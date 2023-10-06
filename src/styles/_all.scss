@@ -1,8 +1,9 @@
 @import 'normolize';
 @import 'common';
 @import 'header';
-@import 'roundCircle';
-@import 'blueCircle';
-@import 'rectangleClock';
+@import './clocks/roundCircle';
+@import './clocks/blueCircle';
+@import './clocks/rectangleClock';
+@import './fallingCode';
 @import 'media';
 

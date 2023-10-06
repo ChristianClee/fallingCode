@@ -1,0 +1,28 @@
+.wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #081b29;
+}
+.buttonBackConteiner{
+  margin: 2rem 0;
+}
+.controllerContainer{
+  position: absolute;
+  top:50%;
+  left: 0rem;
+  transform: translateY(-50%);
+  gap: 1rem;
+  z-index: 33;
+}
+@media(max-width:768px){
+  .controllerContainer{
+  position: absolute;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  transform: none;
+  gap: 1rem;
+}
+}
+
