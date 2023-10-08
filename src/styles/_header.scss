@@ -13,7 +13,7 @@ header{
 .header {
   border-bottom: 1px solid black;
   z-index: 23;
-  background-color: rgb(141, 140, 140);
+  background-color: rgba(141, 140, 140, 0.404);
   &__logo{
     display: flex;
     align-items: center;

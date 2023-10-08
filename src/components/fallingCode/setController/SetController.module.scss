@@ -18,3 +18,13 @@
     color:  rgb(77, 212, 224);
   }
 }
+
+@media(max-width: 540px){
+  .wrapper{
+     & button{
+      width: 2.5rem;
+      height: 2.5rem;
+     }
+  }
+
+}

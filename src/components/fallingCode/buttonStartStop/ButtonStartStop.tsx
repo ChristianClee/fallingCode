@@ -10,7 +10,7 @@ const ButtonStartStop: React.FC<IButton> = ({ text, func }) => {
   return (
     <button
       className={style.wrapper}
-      onClick={() =>  func()}
+      onClick={ () => func()}
     >{text}</button>
   );
 }

@@ -87,7 +87,7 @@ const RoundCircle: React.FC = () => {
       </FormOne>
   }
   const [statusButtons, setStatusButtons] = useState(matches.resetClick)
-  // const [messages, setMessages] = useState<messageDateType[]>([])
+
 
 
   
@@ -95,12 +95,16 @@ const RoundCircle: React.FC = () => {
     millseconds.current += 1
   }
   function getMoveBigArrow() {
-      //@ts-ignore
-    outerArrow.current.style.transform = `rotate(${bigArrowDeg.current+=.06}deg)`
+    if (outerArrow.current) {
+      outerArrow.current.style.transform = `rotate(${bigArrowDeg.current += .06}deg)`
+    }
+    
   }
   function getMoveLittleArrow() {
-    //@ts-ignore
-    innerArrow.current.style.transform = `rotate(${littleArrowDeg.current += 3.6}deg)`
+    if (innerArrow.current) {
+      innerArrow.current.style.transform = `rotate(${littleArrowDeg.current += 3.6}deg)`
+    }
+    
   }
   function start() {
     if (!flag) {
@@ -163,8 +167,10 @@ const RoundCircle: React.FC = () => {
     return getTime(millseconds.current - firstRival.current)
   }
   function setTableValue(value:string):void {
-    // @ts-ignore
-    millsecondsTime.current.textContent = value
+    if (millsecondsTime.current) {
+      millsecondsTime.current.textContent = value
+    }
+    
   }
   function addZerro(value: number|string): string {
     value = String(value)
@@ -177,11 +183,13 @@ const RoundCircle: React.FC = () => {
     return `${minuets}:${seconds}:${tenthSec}`
   }
   function clearDisplay() {
-    //@ts-ignore
+
     millseconds.current = 0
-    //@ts-ignore
-    millsecondsTime.current.textContent = '00:00:00'
-  }
+    if (millsecondsTime.current) {
+      millsecondsTime.current.textContent = '00:00:00'
+    }
+    }
+   
   function getDifference(last:number, old:number):string {
     let difference = last - old
     if (difference < 0) difference *= -1

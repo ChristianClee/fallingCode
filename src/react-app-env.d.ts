@@ -2,7 +2,7 @@
 
 declare module 'csstype' {
   interface Properties {
-    '--disp'?:string;
+    '--disp'?: string;
   }
 }
 
