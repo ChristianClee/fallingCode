@@ -1,12 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import clockReduser from './slices/clockSlice'
-import rectangleReduser from './slices/rectangleSlice'
 import fallingCodeReduser from './slices/fallingCode'
 
 export const store = configureStore({
   reducer: {
-    clock: clockReduser,
-    rectangle: rectangleReduser,
     fallingCode: fallingCodeReduser,
   },
 })

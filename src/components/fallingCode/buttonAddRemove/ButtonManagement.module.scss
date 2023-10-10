@@ -7,11 +7,40 @@
   border: 1px solid rgb(77, 212, 224);
 }
 
+
+.wrapperMain{
+  background-color:  rgb(77, 212, 224);
+  color: #081b29;
+  font-weight: 600;
+}
+
+.wrapperMain:hover{
+  color: white
+}
+.wrapper:active{
+  transform: scale(.9);
+}
+.wrapper:hover{
+  background-color:  rgb(79, 3, 71);
+}
+
+@media (max-width: 765px){
+  .wrapperBig1{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 540px) {
   .wrapper{
-    width: 4rem;
+    width: 5rem;
     height: 2.5rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
-
+    .wrapperBig1{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
 }

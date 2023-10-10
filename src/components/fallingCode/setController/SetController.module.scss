@@ -9,6 +9,14 @@
     border-radius: 50%;
     background-color: transparent;
     color:  rgb(77, 212, 224);
+    font-size: 1.5rem;
+    &:hover{
+      background: rgb(83, 1, 49);
+      color: white;
+    }
+    &:active{
+      transform: scale(.9);
+    }
   }
   & span{
     width: 4rem;
@@ -22,8 +30,8 @@
 @media(max-width: 540px){
   .wrapper{
      & button{
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.7rem;
+      height: 2.7rem;
      }
   }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import style from "./ButtonManagement.module.scss"
+import { useSelector } from 'react-redux';
+import { selectFallingCode } from "../../../redux/slices/fallingCode"
 
 
 
@@ -11,9 +13,25 @@ interface IButton {
   value?: number
 }
 const ButtonManagement: React.FC<IButton> = ({ text, func, func2, func3, value }) => {
+  const { countLine } = useSelector(selectFallingCode)
+  console.log(countLine)
+
+  let  classNameBtn = (text === "add new") ?
+    [style.wrapper, style.wrapperMain].join(" ")
+    :
+    style.wrapper
+  
+  classNameBtn = (countLine === 0) ?
+    [classNameBtn, style.wrapperBig1].join(" ")
+    :
+    classNameBtn
+
+
+
   return (
     <button
-      className={style.wrapper}
+      className={classNameBtn}
+      
       onClick={() => {
         if (func3) {
           func3()
@@ -24,11 +42,12 @@ const ButtonManagement: React.FC<IButton> = ({ text, func, func2, func3, value }
         if (func2) {
           func2()
         }
-      }}
-    >
+        }}
+       >
       {text}
     </button>
   );
 }
+
 export default ButtonManagement;
 

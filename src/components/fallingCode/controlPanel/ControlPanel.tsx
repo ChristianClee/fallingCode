@@ -1,7 +1,5 @@
-import React, { useCallback } from 'react';
+import React  from 'react';
 import style from "./ControlPanel.module.scss"
-import ButtonStartStop from '../buttonStartStop/ButtonStartStop';
-import Display from '../display/Display';
 import ButtonManagement from '../buttonAddRemove/ButtonManagement';
 import SetController from '../setController/SetController';
 import { useActions } from "../../../hooks/reduxHook"
@@ -11,11 +9,11 @@ import { removeLine, changeSpeed, changeMove, deleteAll, apply } from "../../../
 
 
 
+
 const ControlPanel: React.FC = () => {
   const { saveLineMove, saveLineSpeed, getCodeStart, getCodeStop, addCountLine, nullCount } = useActions()
-  const { lineMove, lineSpeed, codeState, countLine } = useSelector(selectFallingCode)
+  const { lineMove, lineSpeed, countLine } = useSelector(selectFallingCode)
 
-  console.log({countLine})
 
   return (
     <div className={style.wrapper}>
